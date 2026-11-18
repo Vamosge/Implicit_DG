@@ -1,13 +1,17 @@
 # GSX implicit DG RANS-SA solver
 
 GSX is a research implementation of a two-dimensional, nodal discontinuous
-Galerkin solver for compressible RANS flow with the Spalart--Allmaras
+Galerkin solver for compressible RANS flow with the Spalart-Allmaras
 turbulence model. The implicit algorithm uses assembled forward-AD Jacobians,
 Newton iteration, restarted GMRES, and block ILU(0). Serial and OpenMP builds
 are supported.
 
-This is release candidate `v1.0.0-rc2`. It is intended for testing and
-reproducible research. It is not yet the final validation release.
+## Associated manuscript
+
+This repository contains the source code for the implicit high-order
+discontinuous Galerkin solver described in the manuscript:
+
+**Investigation of Accuracy and Cost Tradeoffs in an Implicit High-Order Discontinuous Galerkin Solver for RANS-SA Flows**
 
 ## Scope
 
