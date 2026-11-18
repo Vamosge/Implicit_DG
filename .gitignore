@@ -1,0 +1,54 @@
+# Local build trees and downloaded toolchains
+/build/
+/.tools/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+/CTestTestfile.cmake
+/Testing/
+/compile_commands.json
+/.ninja_deps
+/.ninja_log
+
+# Simulation runs can contain multi-megabyte solutions and checkpoints.
+# Keep validation/reference input under reference/ tracked; ignore generated runs.
+/runs/
+
+# Solver output written when the executable is launched from the repository root
+/case_conditions.dat
+/event_history.dat
+/nonlinear_residual_history.dat
+/residual_history.dat
+/run_summary.dat
+/solver.log
+/solution_*.dat
+/checkpoint_*.bin
+/sa_limiter_history.dat
+/sa_residual_diagnostics.dat
+/physical_convergence.dat
+/cf_bump.dat
+/cf_plate.dat
+/wall_flux_diagnostics.dat
+/mut_*.dat
+/uplus_yplus_bump.dat
+/uplus_yplus_plate.dat
+
+# Compiler and profiling artifacts accidentally emitted outside build/
+/*.exe
+/*.dll
+/*.lib
+/*.obj
+/*.pdb
+/*.ilk
+/*.profraw
+/*.profdata
+
+# Editor and operating-system files
+/.vs/
+/.vscode/
+/.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

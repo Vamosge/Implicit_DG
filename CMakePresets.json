@@ -1,0 +1,178 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "release-bump89",
+      "displayName": "Release - 89x41 bump grid",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-bump89",
+      "toolchainFile": "${sourceDir}/cmake/zig-windows.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "GSX_CASE": "bump89",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-bump89-openmp-windows",
+      "displayName": "Release - 89x41 bump grid - Windows MSVC OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-bump89-openmp-windows",
+      "environment": { "_CL_": "/Z7" },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "${sourceDir}/.tools/ninja/ninja.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TRY_COMPILE_CONFIGURATION": "Release",
+        "GSX_CASE": "bump89",
+        "GSX_ENABLE_OPENMP": "ON",
+        "GSX_REQUIRE_OPENMP": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-plate35",
+      "displayName": "Release - 35x25 flat-plate grid",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-plate35",
+      "toolchainFile": "${sourceDir}/cmake/zig-windows.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "GSX_CASE": "plate35",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-plate35-openmp-windows",
+      "displayName": "Release - 35x25 flat-plate grid - Windows MSVC OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-plate35-openmp-windows",
+      "environment": { "_CL_": "/Z7" },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "${sourceDir}/.tools/ninja/ninja.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TRY_COMPILE_CONFIGURATION": "Release",
+        "GSX_CASE": "plate35",
+        "GSX_ENABLE_OPENMP": "ON",
+        "GSX_REQUIRE_OPENMP": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-plate69-openmp-windows",
+      "displayName": "Release - 69x49 flat-plate grid - Windows MSVC OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-plate69-openmp-windows",
+      "environment": { "_CL_": "/Z7" },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "${sourceDir}/.tools/ninja/ninja.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TRY_COMPILE_CONFIGURATION": "Release",
+        "GSX_CASE": "plate69",
+        "GSX_ENABLE_OPENMP": "ON",
+        "GSX_REQUIRE_OPENMP": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-naca113-openmp-windows",
+      "displayName": "Release - NACA0012 original 113x33 - Windows MSVC OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-naca113-openmp-windows",
+      "environment": { "_CL_": "/Z7" },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "${sourceDir}/.tools/ninja/ninja.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TRY_COMPILE_CONFIGURATION": "Release",
+        "GSX_CASE": "naca113-original",
+        "GSX_ENABLE_OPENMP": "ON",
+        "GSX_REQUIRE_OPENMP": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-naca113-familyII-openmp-windows",
+      "displayName": "Release - NACA0012 Family II 113x33 - Windows MSVC OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-naca113-familyII-openmp-windows",
+      "environment": { "_CL_": "/Z7" },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "${sourceDir}/.tools/ninja/ninja.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TRY_COMPILE_CONFIGURATION": "Release",
+        "GSX_CASE": "naca113-familyII",
+        "GSX_ENABLE_OPENMP": "ON",
+        "GSX_REQUIRE_OPENMP": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    },
+    {
+      "name": "release-naca225-openmp-windows",
+      "displayName": "Release - NACA0012 Family II 225x65 - Windows MSVC OpenMP",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release-naca225-openmp-windows",
+      "environment": { "_CL_": "/Z7" },
+      "cacheVariables": {
+        "CMAKE_MAKE_PROGRAM": "${sourceDir}/.tools/ninja/ninja.exe",
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TRY_COMPILE_CONFIGURATION": "Release",
+        "GSX_CASE": "naca225",
+        "GSX_ENABLE_OPENMP": "ON",
+        "GSX_REQUIRE_OPENMP": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    { "name": "release-bump89", "configurePreset": "release-bump89" },
+    { "name": "release-bump89-openmp-windows", "configurePreset": "release-bump89-openmp-windows" },
+    { "name": "release-plate35", "configurePreset": "release-plate35" },
+    { "name": "release-plate35-openmp-windows", "configurePreset": "release-plate35-openmp-windows" },
+    { "name": "release-plate69-openmp-windows", "configurePreset": "release-plate69-openmp-windows" },
+    { "name": "release-naca113-openmp-windows", "configurePreset": "release-naca113-openmp-windows" },
+    { "name": "release-naca113-familyII-openmp-windows", "configurePreset": "release-naca113-familyII-openmp-windows" },
+    { "name": "release-naca225-openmp-windows", "configurePreset": "release-naca225-openmp-windows" }
+  ],
+  "testPresets": [
+    {
+      "name": "release-bump89",
+      "configurePreset": "release-bump89",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-bump89-openmp-windows",
+      "configurePreset": "release-bump89-openmp-windows",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-plate35",
+      "configurePreset": "release-plate35",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-plate35-openmp-windows",
+      "configurePreset": "release-plate35-openmp-windows",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-plate69-openmp-windows",
+      "configurePreset": "release-plate69-openmp-windows",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-naca113-openmp-windows",
+      "configurePreset": "release-naca113-openmp-windows",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-naca225-openmp-windows",
+      "configurePreset": "release-naca225-openmp-windows",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "release-naca113-familyII-openmp-windows",
+      "configurePreset": "release-naca113-familyII-openmp-windows",
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}

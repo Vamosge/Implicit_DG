@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this software release."
+title: "GSX implicit discontinuous Galerkin RANS-SA solver"
+type: software
+version: "1.0.0-rc2"
+date-released: 2026-11-18
+license: BSD-3-Clause
+repository-code: "https://github.com/whyliu13/Implicit_DG"
+authors:
+  - family-names: Ge
+    given-names: Sixiong
+  - family-names: Yan
+    given-names: Yan
+  - family-names: Liu
+    given-names: Yang
+  - family-names: Sheng
+    given-names: Zhehao
+  - family-names: Cui
+    given-names: Jiahuan
+keywords:
+  - discontinuous Galerkin
+  - RANS
+  - Spalart-Allmaras
+  - automatic differentiation
+  - Newton-GMRES
